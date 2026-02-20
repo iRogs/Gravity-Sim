@@ -24,7 +24,6 @@ public class Engine {
             Vetor3D direcao = corpo.getPosicao().sub(ponto);
             double distSq = direcao.magSq();
             
-            // Segurança matemática contra singularidade (divisão por zero)
             if (distSq < 1e6) return new Vetor3D(0, 0, 0); 
 
             double intensidade = (G * corpo.getMassa()) / distSq;
